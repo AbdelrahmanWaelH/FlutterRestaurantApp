@@ -6,7 +6,7 @@ final restaurantListProvider = Provider<List<Map<String, dynamic>>>((ref) {
       "name": "The Pizza Place",
       "description": "Authentic Italian pizza.",
       "image":
-          "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600",
+          "https://images.unsplash.com/photo-1604624483037-489d287ae9fd?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGl6emElMjBzaG9wfGVufDB8fDB8fHww",
       "rating": 4.5,
     },
     {

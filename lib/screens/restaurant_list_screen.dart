@@ -42,22 +42,32 @@ class RestaurantListScreen extends ConsumerWidget {
                   },
                   child: Card(
                     margin: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    clipBehavior: Clip.antiAlias,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Image.network(r['image'],
-                            height: 180,
-                            fit: BoxFit.cover,
-                            width: double.infinity),
+                        Image.network(
+                          r['image'],
+                          height: 180,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                        ),
                         Padding(
                           padding: EdgeInsets.all(12),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(r['name'],
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold)),
+                              Text(
+                                r['name'],
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                               SizedBox(height: 4),
                               Text(r['description']),
                               SizedBox(height: 8),
@@ -71,7 +81,7 @@ class RestaurantListScreen extends ConsumerWidget {
                               ),
                             ],
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
