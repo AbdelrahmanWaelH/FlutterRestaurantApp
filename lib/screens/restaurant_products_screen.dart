@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:helloworld/widgets/common_app_bar.dart';
 import '../providers/product_provider.dart';
 import 'product_details_screen.dart';
 
@@ -14,7 +15,7 @@ class RestaurantProductsScreen extends ConsumerWidget {
     final products = ref.watch(filteredProductsProvider(restaurant['name']));
 
     return Scaffold(
-      appBar: AppBar(title: Text(restaurant['name'])),
+      appBar: CommonAppBar(title: restaurant['name']),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

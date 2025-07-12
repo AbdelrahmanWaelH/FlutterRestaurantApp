@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:helloworld/widgets/common_app_bar.dart';
 import '../providers/restaurant_provider.dart';
 import 'restaurant_products_screen.dart';
 
@@ -10,7 +11,7 @@ class RestaurantListScreen extends ConsumerWidget {
     final search = ref.watch(restaurantSearchProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text("Restaurants")),
+      appBar: CommonAppBar(title: "Restaurants", showBack: false),
       body: Column(
         children: [
           Padding(
