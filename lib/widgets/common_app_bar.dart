@@ -19,7 +19,8 @@ class CommonAppBar extends ConsumerWidget implements PreferredSizeWidget {
     final basket = ref.watch(basketProvider);
 
     return AppBar(
-      leading: showBack ? null : SizedBox.shrink(),
+      automaticallyImplyLeading: showBack,
+      centerTitle: !showBack, //center title when there's no back button
       title: Text(title),
       actions: [
         ...?extraActions,
