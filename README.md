@@ -1,19 +1,56 @@
-# Hello World
+# 🍽️ Flutter Dining App
 
-A new Flutter project created with FlutLab - https://flutlab.io
+A simple dining experience app built with **Flutter** and **Riverpod**.  
+Users can log in, browse restaurants, view menus, see product details, select quantities, manage a basket, and checkout.
 
-## Getting Started
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- https://flutter.dev/docs/get-started/codelab
-- https://flutter.dev/docs/cookbook
+- 🔐 **Login Screen**  
+  Email and password input with validation (required fields, email format).  
+  Hardcoded credentials for demo:
+  - Email: `user@example.com`  
+  - Password: `password123`
 
-For help getting started with Flutter, view our
-https://flutter.dev/docs, which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 🏬 **Restaurants List**  
+  Searchable list showing restaurant name, description, rating, and image (public URLs).
 
-## Getting Started: FlutLab - Flutter Online IDE
+- 🍕 **Restaurant Products**  
+  Displays products for selected restaurant with name, price, and image.
 
-- How to use FlutLab? Please, view our https://flutlab.io/docs
-- Join the discussion and conversation on https://flutlab.io/residents
+- 🔍 **Product Details**  
+  Full details, quantity selector, and add-to-basket functionality.
+
+- 🧺 **Basket Management**  
+  Basket icon in the AppBar showing item count, with checkout screen displaying order summary.
+
+---
+
+## State Management
+
+Uses **Riverpod** for:
+
+- Basket state management  
+- Search filters for restaurants and products
+
+---
+
+## Data & Images
+
+Currently uses **hardcoded data lists** for restaurants and products with public image URLs. No real API fetching yet.
+
+---
+
+## Dependencies
+
+- [`flutter_riverpod`](https://pub.dev/packages/flutter_riverpod) for state management  
+- Flutter’s built-in Material widgets for UI  
+
+---
+
+## Running the App
+
+```bash
+flutter pub get
+flutter run
